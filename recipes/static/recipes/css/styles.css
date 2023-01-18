@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--color-primary-dark);
 }
 .container {
-    max-width: 144rem;
+    max-width: 136rem;
     margin: 0 auto;
     padding: var(--spacing-gutter-medium);
 }
@@ -254,16 +254,6 @@ h1, h2, h3, h4, h5, h6 {
     filter: brightness(.8);
 }
 
-/* .cat404 {
+.cat404 {
     padding-top: var(--spacing-gutter-medium);
-} */
-
-body {
-    height: 100vh;
-}
-
-.main-content-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+} 
