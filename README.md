@@ -1,4 +1,4 @@
-# curso-django-projeto1
+# curso-django-project1
 > Este repositório tem como intuito desenvolver um website usando a framework django do Python.
 
 ## Preview Website
