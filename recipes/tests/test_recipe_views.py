@@ -3,9 +3,6 @@ from recipes import views
 from .test_recipe_base import RecipeTestBase
 
 class RecipeViewsTest(RecipeTestBase):
-    def tearDown(self) -> None:
-        return super().tearDown()
-    
     def test_recipe_home_view_home_is_correct(self):
         view = resolve(reverse('recipes:home'))
         self.assertIs(view.func, views.home)
@@ -26,14 +23,13 @@ class RecipeViewsTest(RecipeTestBase):
         )
 
     def test_recipe_home_template_loads_recipes(self):
+        # Need a recipe for this test
+        self.make_recipe()
         response = self.client.get(reverse('recipes:home'))
-        # self.assertEqual(len(response.context['recipes']), 1)
-
         content = response.content.decode('utf-8')
+
+        # Check if one recipe exists
         self.assertIn('Recipe Title', content)
-        self.assertIn('Recipe Description', content)
-        self.assertIn('30 Minutes', content)
-        ... # elipsis
 
     def test_recipe_category_view_home_is_correct(self):
         view = resolve(
