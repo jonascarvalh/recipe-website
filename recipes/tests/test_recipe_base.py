@@ -30,15 +30,13 @@ class RecipeTestBase(TestCase):
         author_data=None,
         title = 'Recipe Title',
         description= 'Recipe Description',
-        slug = 'Recipe Slug',
+        slug = 'recipe-slug',
         preparation_time = '30',
         preparation_time_unit = 'Minutes',
         servings = '3',
         servings_unit = 'Persons',
         preparation_steps = 'Recipe Steps',
         preparation_steps_is_html = False,
-        created_at = '2023-09-11 00:00:00',
-        updated_at = '2023-09-11 00:00:00',
         is_published = True
     ):
         if category_data is None:
@@ -58,7 +56,5 @@ class RecipeTestBase(TestCase):
             servings_unit=servings_unit,
             preparation_steps=preparation_steps,
             preparation_steps_is_html = preparation_steps_is_html,
-            created_at=created_at,
-            updated_at=updated_at,
             is_published=is_published
         )
