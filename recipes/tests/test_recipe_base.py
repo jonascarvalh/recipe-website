@@ -6,7 +6,7 @@ class RecipeTestBase(TestCase):
         return super().setUp()
     
     def make_category(self, name='Category'):
-        category = Category.objects.create(name=name)
+        return Category.objects.create(name=name)
     
     def make_author(
         self, 
