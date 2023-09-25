@@ -2,7 +2,7 @@
 > Este repositório tem como intuito desenvolver um website usando a framework django do Python.
 
 ## Preview Website
-<img src="https://i.ibb.co/6wCV19y/preview-website.jpg" alt="preview-website">
+<img src="https://i.ibb.co/NWYtGdz/print-django-app-recipes.png" alt="preview-website">
 
 ## Instalação dos requisitos
 Recomenda-se que seja instalado em um ambiente virtual. Para criar uma é simples:
