@@ -25,6 +25,11 @@ Instale as dependências:
 pip install -r requirements.txt
 ```
 
+## Aplique as migrations:
+```sh
+python manage.py migrate
+```
+
 ## Rodando o servidor com o website:
 ```sh
 py manage.py runserver --insecure
@@ -36,3 +41,16 @@ No meu caso é:
 ```sh
 127.0.0.1:8000
 ```
+
+## Rodando com Docker
+Na pasta do projeto, digite o seguinte comando para "buildar" a aplicação:
+```sh
+docker build -t django/recipes-app .
+```
+
+Em seguida, rode:
+```sh
+docker run -d -p 8000:8000 --name recipes-app django/recipes-app
+```
+
+E... **voilà!!!** Você tem a aplicação rodando em um contêiner com docker! :D 
