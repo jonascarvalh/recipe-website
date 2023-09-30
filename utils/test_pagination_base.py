@@ -1,7 +1,7 @@
 from recipes.models import Category, Recipe, User
 from django.test import TestCase
 
-class RecipeTestBase(TestCase):
+class RecipePaginationBase(TestCase):
     def setUp(self) -> None:
         return super().setUp()
     
@@ -46,8 +46,8 @@ class RecipeTestBase(TestCase):
             author_data = {}
             
         return Recipe.objects.create(
-            category=self.make_category(**category_data), # desempacotamento
-            author=self.make_author(**author_data),
+            category=None, # desempacotamento
+            author=None,
             title=title,
             description=description,
             slug=slug,
