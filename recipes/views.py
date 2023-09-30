@@ -7,7 +7,7 @@ from utils.pagination import make_pagination
 # HTTP Request
 import os 
 
-PER_PAGE = os.environ.get('PER_PAGE', 9)
+PER_PAGE = int(os.environ.get('PER_PAGE', 9))
 
 # Create your views here.
 def home(request):
