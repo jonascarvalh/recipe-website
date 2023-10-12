@@ -5,8 +5,8 @@
     "python.testing.pytestArgs": [
       "."
     ], // -x to bail
-    "python.linting.flake8Enabled": true,
-    "python.linting.mypyEnabled": true,
+    "python.linting.flake8Enabled": false,
+    "python.linting.mypyEnabled": false,
     "python.linting.pylintArgs": [
       "--load-plugins=pylint_django",
       "--errors-only"

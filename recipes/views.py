@@ -3,6 +3,8 @@ from django.http import HttpResponse, Http404
 from recipes.models import Recipe
 from django.db.models import Q
 from utils.pagination import make_pagination
+from django.contrib import messages
+
 # HTTP REQUEST <- HTTP RESPONSE
 # HTTP Request
 import os 
@@ -16,6 +18,8 @@ def home(request):
     ).order_by('-id')
 
     page_obj, pagination_range = make_pagination(request, recipes, PER_PAGE)
+
+    messages.success(request, 'Uma mensagem de êxito!')
 
     return render(request, 'recipes/pages/home.html', context={
         'recipes': page_obj,
