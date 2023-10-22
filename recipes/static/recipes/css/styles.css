@@ -354,7 +354,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .form-content button {
     padding: 1rem 2rem;
-    border: none;
+    border: 1px var(--color-primary-dark);
+    border-radius: 0.4rem;
     background-color: var(--color-primary-dark);
     color: var(--color-white);
 }
@@ -363,6 +364,9 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
 }
 
+.form-group {
+    font-size: 1.4rem;
+}
 /* Messages */
 .message-container{
     display: flex;
@@ -419,5 +423,4 @@ h1, h2, h3, h4, h5, h6 {
     .form-content-grid {
         grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     }
-
 }
