@@ -6,7 +6,7 @@ def add_attr(field, attr_name, attr_new_val):
     field.widget.attrs[attr_name] = f'{existing_attr} {attr_new_val}'.strip()
 
 def add_placeholder(field, placeholder_val):
-    field.widget.attrs['placeholder'] = placeholder_val
+    add_attr(field, 'placeholder', placeholder_val)
 
 class RegisterForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
@@ -15,7 +15,7 @@ class RegisterForm(forms.ModelForm):
         add_placeholder(self.fields['email'], 'Your e-mail')
         add_placeholder(self.fields['first_name'], 'Your first name')
         add_placeholder(self.fields['last_name'], 'Your last name')
-
+        add_attr(self.fields['username'], 'css', 'a-css-class')
 
 
     password = forms.CharField(
