@@ -91,7 +91,6 @@ class RegisterForm(forms.ModelForm):
         widgets = {
             # each field have different widget
             'first_name': forms.TextInput(attrs={
-                'placeholder': 'Type your first name here',
                 'class': 'input text-input outra-classe'
             }),
             'password': forms.PasswordInput(attrs={ # field has password type "***"
