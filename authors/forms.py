@@ -26,17 +26,17 @@ def strong_password(password):
 class RegisterForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        add_placeholder(self.fields['username'], 'Your Username')
+        add_placeholder(self.fields['username'], 'Your username')
         add_placeholder(self.fields['email'], 'Your e-mail')
         add_placeholder(self.fields['first_name'], 'Your first name')
         add_placeholder(self.fields['last_name'], 'Your last name')
+        add_placeholder(self.fields['password'], 'Type your password')
+        add_placeholder(self.fields['password2'], 'Repeat your password')
         add_attr(self.fields['username'], 'css', 'a-css-class')
 
     password = forms.CharField(
         required=True,
-        widget=forms.PasswordInput(attrs={
-            'placeholder': 'Your password here'
-        }),
+        widget=forms.PasswordInput(),
         error_messages={
             'required': 'Password must not be empty.'
         },
@@ -50,9 +50,7 @@ class RegisterForm(forms.ModelForm):
 
     password2 = forms.CharField(
         required=True,
-        widget=forms.PasswordInput(attrs={
-            'placeholder': 'Repeat your password here'
-        })
+        widget=forms.PasswordInput()
     )
     class Meta:
         model = User
@@ -86,16 +84,6 @@ class RegisterForm(forms.ModelForm):
                 'required': 'This field must not be empty',
                 'invalid': 'This field is invalid'
             }
-        }
-
-        widgets = {
-            # each field have different widget
-            'first_name': forms.TextInput(attrs={
-                'class': 'input text-input outra-classe'
-            }),
-            'password': forms.PasswordInput(attrs={ # field has password type "***"
-                'placeholder': 'Type your password here'
-            })
         }
 
     def clean_password(self):
