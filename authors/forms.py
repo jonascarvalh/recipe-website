@@ -70,7 +70,6 @@ class RegisterForm(forms.ModelForm):
         widget=forms.PasswordInput(),
         error_messages={
             'required': 'Password must not be empty',
-            'invalid': 'This field is invalid'
         },
         help_text=(
             'Password must have at least one uppercase letter, '
