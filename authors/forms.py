@@ -100,7 +100,7 @@ class RegisterForm(forms.ModelForm):
         ]
 
     def clean_email(self):
-        email = self.cleaned_data.get({'email': ''})
+        email = self.cleaned_data.get('email', '')
         exists = User.objects.filter(email=email).exists()
 
         if exists:
