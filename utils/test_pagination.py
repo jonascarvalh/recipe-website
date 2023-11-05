@@ -4,7 +4,7 @@ from django.urls import reverse, resolve
 from .test_pagination_base import RecipePaginationBase
 
 class PaginationTest(TestCase):
-    def test_make_pagination_range_returns_a_apgination_range(self):
+    def test_make_pagination_range_returns_a_pagination_range(self):
         pagination = make_pagination_range(
             page_range=list(range(1,21)),
             qty_pages=4,
@@ -93,7 +93,7 @@ class PaginationTest(TestCase):
             current_page=20,
         )['pagination']
         self.assertEqual([17,18,19,20], pagination)
-    
+
 class PaginationTestView(RecipePaginationBase):
     def test_max_recipes_per_page(self):
         for i in range(3):
