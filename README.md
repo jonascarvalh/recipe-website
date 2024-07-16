@@ -17,7 +17,7 @@ Ative o ambiente virtual (Windows)
 
 Ative o ambiente virtual (Linux)
 ```sh
-./venv/Scripts/activate
+./venv/bin/activate
 ```
 
 Instale as dependências:
