@@ -1,10 +1,7 @@
 from recipes.models import Category, Recipe, User
 from django.test import TestCase
 
-class RecipeTestBase(TestCase):
-    def setUp(self) -> None:
-        return super().setUp()
-    
+class RecipeMixin:
     def make_category(self, name='Category'):
         return Category.objects.create(name=name)
     
@@ -59,3 +56,7 @@ class RecipeTestBase(TestCase):
             preparation_steps_is_html = preparation_steps_is_html,
             is_published=is_published
         )
+
+class RecipeTestBase(TestCase, RecipeMixin):
+    def setUp(self) -> None:
+        return super().setUp()
