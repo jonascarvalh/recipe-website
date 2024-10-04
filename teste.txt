@@ -1,0 +1,100 @@
+<html lang="pt-br">
+<head>
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css" integrity="sha512-giQeaPns4lQTBMRpOOHsYnGw1tGVzbAIHUyHRgn7+6FmiEgGGjaG0T2LZJmAPMzRCl+Cug0ItQ2xDZpTmEc+CQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/brands.min.css" integrity="sha512-G/T7HQJXSeNV7mKMXeJKlYNJ0jrs8RsWzYG7rVACye+qrcUhEAYKYzaa+VFy6eFzM2+/JT1Q+eqBbZFSHmJQew==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/solid.min.css" integrity="sha512-6mc0R607di/biCutMUtU9K7NtNewiGQzrvWX4bWTeqmljZdJrwYvKJtnhgR+Ryvj+NRJ8+NnnCM/biGqMe/iRA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/global/css/styles.css">
+<link rel="stylesheet" href="/static/global/css/global-style.css">
+    <title>
+    Login
+ | Recipes</title>
+</head>
+<body>
+    <header class="main-header-container">
+    <div class="container">
+        <h1>
+            <a class="main-logo"  href="/">
+                <i class="fa-solid fa-utensils main-logo-icon"></i><span class="main-logo-text">Recipes</span>
+            </a>
+        </h1>
+    </div>
+</header>
+    <div class="search-container">
+    <div class="container">
+        <form action="/recipes/search/" method="GET" class="search-form">
+            <input
+                type="search"
+                class="search-input"
+                name="q"
+                value=""
+                placeholder="Search for a recipe..."
+                required
+            >
+            <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
+        </form>
+    </div>
+</div>
+
+    <main class="main-content-container">
+
+    <div class="main-content center container">
+        <h2>Login</h2>
+
+    </div>
+
+
+    <div class="main-content container">
+    <form action="/authors/login/create/" method="POST" class="main-form"> <input type="hidden" name="csrfmiddlewaretoken" value="VQFHRsl9tA9rT83tsa8j1EXwRZxl2uTqh8RaXXz6xgKl0LJoNizly3xLDiANNwbX">
+        <div class="form-content form-content-grid">
+
+                <div class="form-group">
+                    <label for="id_username">
+                        Username
+                    </label>
+                    <input type="text" name="username" placeholder="Type your username" required id="id_username">
+
+
+
+
+                </div>
+
+                <div class="form-group">
+                    <label for="id_password">
+                        Password
+                    </label>
+                    <input type="password" name="password" placeholder="Type your password" required id="id_password">
+
+
+
+
+                </div>
+
+        </div>
+
+        <div class="form-content form-content-grid">
+            <div class="form-group">
+                <button type="submit">Send</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+    </main>
+    <footer class="main-footer">
+    <div class="developer">
+      <a href="https://www.otaviomiranda.com.br/" target="_blank" rel="noreferrer noopener">By Jonas Carvalho</a>
+    </div>
+
+    <div class="powered">
+      <a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer noopener">Powered by Django</a>
+    </div>
+  </footer>
+</body>
+</html>
