@@ -58,6 +58,15 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-headings);
 }
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
 .main-header-container {
     background: var(--color-primary-dark);
 }
