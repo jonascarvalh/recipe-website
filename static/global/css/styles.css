@@ -279,6 +279,10 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
+.left {
+    text-align: left;
+}
+
 .m-y {
     margin: var(--spacing-gutter-medium) 0;
 }
@@ -339,7 +343,10 @@ h1, h2, h3, h4, h5, h6 {
 .errorlist {
     color: var(--color-error-dark);
 }
-.form-content input {
+
+.form-content input,
+.form-content textarea,
+.form-content select {
     width: 100%;
     padding: 1rem;
     border-radius: 0.4rem;
@@ -381,6 +388,9 @@ h1, h2, h3, h4, h5, h6 {
     display: inline;
 }
 
+.span-2 {
+    grid-column: span 2;
+}
 /* Messages */
 .message-container{
     display: flex;
