@@ -149,7 +149,6 @@ def dashboard_recipe_create_view(request):
         recipe.author = request.user
         recipe.preparation_steps_is_html = False
         recipe.is_published = False
-        recipe.slug = recipe.title.lower().replace("", "-")
 
         form.save()
         messages.success(request, "Sua receita foi salva com sucesso.")
