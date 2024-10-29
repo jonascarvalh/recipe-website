@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from recipes.models import Recipe
 
-from .forms import RegisterForm, LoginForm, AuthorRecipeForm
+from authors.forms import RegisterForm, LoginForm, AuthorRecipeForm
 
 def register_view(request):
     register_form_data = request.session.get('register_form_data', None)
