@@ -6,3 +6,4 @@ parameterized==0.9.0
 coverage==7.3.1
 python-dotenv==1.0.0
 selenium==4.15.2
+django_debug_toolbar==4.4.6
