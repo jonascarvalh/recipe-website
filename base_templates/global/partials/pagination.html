@@ -7,9 +7,8 @@
                 </a>
                 <span class="page-item-ret">...</span>
             {% endif %}
-
-            {% for page in pagination_range.pagination %}
-                {% if page == 1 and pagination_range.first_page_out_of_range == True %}
+            {% for page in pagination_range.page_range %}
+                {% if page == 1 and pagination_range.first_page_out_of_range %}
                 {% elif pagination_range.current_page == page %}
                     <a aria-label="Current page {{ page }}" aria-current="true" href="?page={{ page }}{{ additional_url_query }}" class="page-link page-item page-current">
                         {{ page }}
